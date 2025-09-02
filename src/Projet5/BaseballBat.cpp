@@ -1,9 +1,9 @@
 #include "BaseballBat.h"
 #include "Bullet.h"
 #include "Player.h"
+#include "Macro.h"
 
-
-BaseballBat::BaseballBat() : Weapon("../../../res/BaseballBat.png", 50, 0.7f)
+BaseballBat::BaseballBat() : Weapon(RES_PATH + "BaseballBat.png", 50, 0.7f)
 {
 }
 
@@ -20,7 +20,7 @@ void BaseballBat::Attack(Player* pPlayer)
 
 	double angle = pPlayer->GetAngle();
 
-	mBullet.push_back(new Bullet("../../../res/BLANK_ICON.png", angle, 0.f, mDamageAmount, pPlayer));
+	mBullet.push_back(new Bullet(RES_PATH + "BLANK_ICON.png", angle, 0.f, mDamageAmount, pPlayer));
 }
 
 void BaseballBat::UpdateWeapon(float DeltaTime, Player* pPlayer, bool IsUsed)

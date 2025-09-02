@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Map.h"
-
+#include "Macro.h"
 
 Map::Map(float width, float height) {
     mMap.setPosition(sf::Vector2f(0,0));
@@ -10,61 +10,61 @@ Map::Map(float width, float height) {
 }
 
 void Map::loadTextures() {
-    if (!Ground.loadFromFile("../../../res/Map/Ground.png")) {
+    if (!Ground.loadFromFile(RES_PATH + "Map/Ground.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Ground.png");
     }
-    if (!Ground2.loadFromFile("../../../res/Map/Ground2.png")) {
+    if (!Ground2.loadFromFile(RES_PATH + "Map/Ground2.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Ground2.png");
     }
-    if (!Road.loadFromFile("../../../res/Map/Road.png")) {
+    if (!Road.loadFromFile(RES_PATH + "Map/Road.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Road.png");
     }
-    if (!Road2.loadFromFile("../../../res/Map/Road2.png")) {
+    if (!Road2.loadFromFile(RES_PATH + "Map/Road2.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Road2.png");
     }
-    if (!PathIntersection.loadFromFile("../../../res/Map/PathIntersection.png")) {
+    if (!PathIntersection.loadFromFile(RES_PATH + "Map/PathIntersection.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture PathIntersection.png");
     }
-    if (!PathIntersection2.loadFromFile("../../../res/Map/PathIntersection2.png")) {
+    if (!PathIntersection2.loadFromFile(RES_PATH + "Map/PathIntersection2.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture PathIntersection2.png");
     } 
-    if (!PathIntersection3.loadFromFile("../../../res/Map/PathIntersection3.png")) {
+    if (!PathIntersection3.loadFromFile(RES_PATH + "Map/PathIntersection3.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture PathIntersection3.png");
     }
-    if (!PathIntersection4.loadFromFile("../../../res/Map/PathIntersection4.png")) {
+    if (!PathIntersection4.loadFromFile(RES_PATH + "Map/PathIntersection4.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture PathIntersection4.png");
     }
-    if (!Intersection.loadFromFile("../../../res/Map/Intersection.png")) {
+    if (!Intersection.loadFromFile(RES_PATH + "Map/Intersection.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Intersection.png");
     }
-    if (!Intersection2.loadFromFile("../../../res/Map/Intersection2.png")) {
+    if (!Intersection2.loadFromFile(RES_PATH + "Map/Intersection2.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Intersection2.png");
     }
-    if (!Intersection3.loadFromFile("../../../res/Map/Intersection3.png")) {
+    if (!Intersection3.loadFromFile(RES_PATH + "Map/Intersection3.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Intersection3.png");
     }
-    if (!Intersection4.loadFromFile("../../../res/Map/Intersection4.png")) {
+    if (!Intersection4.loadFromFile(RES_PATH + "Map/Intersection4.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture Intersection4.png");
     }
-    if (!AllWays.loadFromFile("../../../res/Map/AllWays.png")) {
+    if (!AllWays.loadFromFile(RES_PATH + "Map/AllWays.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture AllWays.png");
     }
-    if (!RoadTurn.loadFromFile("../../../res/Map/RoadTurn.png")) {
+    if (!RoadTurn.loadFromFile(RES_PATH + "Map/RoadTurn.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture RoadTurn.png");
     }
-    if (!RoadTurn2.loadFromFile("../../../res/Map/RoadTurn2.png")) {
+    if (!RoadTurn2.loadFromFile(RES_PATH + "Map/RoadTurn2.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture RoadTurn2.png");
     }
-    if (!RoadTurn3.loadFromFile("../../../res/Map/RoadTurn3.png")) {
+    if (!RoadTurn3.loadFromFile(RES_PATH + "Map/RoadTurn3.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture RoadTurn3.png");
     }
-    if (!RoadTurn4.loadFromFile("../../../res/Map/RoadTurn4.png")) {
+    if (!RoadTurn4.loadFromFile(RES_PATH + "Map/RoadTurn4.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture RoadTurn4.png");
     }
-    if (!CrackedGround.loadFromFile("../../../res/Map/CrackedGround.png")) {
+    if (!CrackedGround.loadFromFile(RES_PATH + "Map/CrackedGround.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture CrackedGround.png");
     }
-    if (!CrackedGround2.loadFromFile("../../../res/Map/CrackedGround2.png")) {
+    if (!CrackedGround2.loadFromFile(RES_PATH + "Map/CrackedGround2.png")) {
         throw std::runtime_error("Erreur : impossible de charger la texture CrackedGround2.png");
     }
 }

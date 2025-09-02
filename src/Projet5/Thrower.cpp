@@ -3,15 +3,16 @@
 #include "Bullet.h"
 #include "Gadget.h"
 #include "Player.h"
+#include "Macro.h"
 
-Thrower::Thrower(sf::Vector2f position, Gadget* Itemdrop) : Enemy("../../../res/Walker.png", 150, 100.f, Itemdrop)
+Thrower::Thrower(sf::Vector2f position, Gadget* Itemdrop) : Enemy(RES_PATH + "Walker.png", 150, 100.f, Itemdrop)
 {
 	setPosition(position);
 	ReloadTime = 2.f;
 	mCoolDown = ReloadTime;
 }
 
-Thrower::Thrower(float x, float y, Gadget* Itemdrop) : Enemy("../../../res/Walker.png", 150, 100.f, Itemdrop)
+Thrower::Thrower(float x, float y, Gadget* Itemdrop) : Enemy(RES_PATH + "Walker.png", 150, 100.f, Itemdrop)
 {
 	setPosition(x, y);
 	ReloadTime = 2.f;
@@ -50,7 +51,7 @@ void Thrower::Attack(double angle, float ElapsedTime)
 	if (mCoolDown <= 0)
 	{
 		mCoolDown = ReloadTime;
-		mEnemyBullet.push_back(new Bullet("../../../res/Stone.png", angle, 200.f, 20, this));
+		mEnemyBullet.push_back(new Bullet(RES_PATH + "Stone.png", angle, 200.f, 20, this));
 	}
 
 	for (int i =0; i < mEnemyBullet.size(); ++i)

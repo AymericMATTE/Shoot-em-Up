@@ -1,4 +1,5 @@
 #include "RessourceManager.h"
+#include "Macro.h"
 
 RessourceManager::RessourceManager()
 {
@@ -13,7 +14,7 @@ void RessourceManager::AddTexture(std::string name)
 {
     sf::Texture* Texture = new sf::Texture;
 
-    std::string filepath = std::string("../../../res/" + name + ".png");
+    std::string filepath = std::string(RES_PATH + name + ".png");
 
     if (!Texture->loadFromFile(filepath))
         exit(0);

@@ -1,10 +1,10 @@
 #include "GameOverMenu.h"
 #include "GameManager.h"
-
+#include "Macro.h"
 
 GameOverMenu::GameOverMenu() : Menu()
 {
-	if (!mTexture.loadFromFile("../../../res/GameOverScreen.png"));
+	if (!mTexture.loadFromFile(RES_PATH + "GameOverScreen.png"));
 }
 
 void GameOverMenu::Init()

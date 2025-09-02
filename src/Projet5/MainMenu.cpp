@@ -1,9 +1,10 @@
 #include "MainMenu.h"
 #include "GameManager.h"
+#include "Macro.h"
 
 MainMenu::MainMenu() : Menu()
 {
-	if (!mTexture.loadFromFile("../../../res/MainMenuScreen.png"));
+	if (!mTexture.loadFromFile(RES_PATH + "MainMenuScreen.png"));
 }
 
 void MainMenu::Init()

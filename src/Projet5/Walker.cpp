@@ -2,13 +2,14 @@
 #include "Bullet.h"
 #include "Gadget.h"
 #include "Player.h"
+#include "Macro.h"
 
-Walker::Walker(sf::Vector2f position,Gadget* Itemdrop) : Enemy("../../../res/Walker.png", 150, 200.f, Itemdrop)
+Walker::Walker(sf::Vector2f position,Gadget* Itemdrop) : Enemy(RES_PATH + "Walker.png", 150, 200.f, Itemdrop)
 {
 	setPosition(position);
 }
 
-Walker::Walker(float x, float y, Gadget* Itemdrop) : Enemy("../../../res/Walker.png", 150, 200.f, Itemdrop)
+Walker::Walker(float x, float y, Gadget* Itemdrop) : Enemy(RES_PATH + "Walker.png", 150, 200.f, Itemdrop)
 {
 	setPosition(x,y);
 }

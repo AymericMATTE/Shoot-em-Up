@@ -4,9 +4,9 @@
 #include "Enemy.h"
 #include "Gadget.h"
 #include "Bullet.h"
+#include "Macro.h"
 
-
-Player::Player(std::vector<Weapon*>& WeaponUsed) : Character("../../../res/PlayerRight.png",150,250.f)
+Player::Player(std::vector<Weapon*>& WeaponUsed) : Character(RES_PATH + "PlayerRight.png",150,250.f)
 {
 	mShield = 0;
 	mUsedWeapon = 0;
@@ -15,10 +15,10 @@ Player::Player(std::vector<Weapon*>& WeaponUsed) : Character("../../../res/Playe
 	mInvincibilityTimer = 0;
 	mWeapons = WeaponUsed;
 
-	if (!mFont.loadFromFile("../../../res/Font/m04b.ttf"))
+	if (!mFont.loadFromFile(RES_PATH + "Font/m04b.ttf"))
 		exit(0);
 
-	if (!mInvicibilityTexture.loadFromFile("../../../res/GlowingPlayerRight.png"))
+	if (!mInvicibilityTexture.loadFromFile(RES_PATH + "GlowingPlayerRight.png"))
 		exit(0);
 
 	mHealth = sf::Text(std::to_string(mHP), mFont);

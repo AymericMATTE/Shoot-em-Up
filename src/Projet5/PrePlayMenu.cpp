@@ -4,6 +4,7 @@
 #include "AssaultRifle.h"
 #include "BaseballBat.h"
 #include "Scene.h"
+#include "Macro.h"
 
 PrePlayMenu::PrePlayMenu()
 {
@@ -16,11 +17,11 @@ PrePlayMenu::PrePlayMenu()
 	sf::Texture AssaultRifle;
 	sf::Texture BaseballBat;
 
-	if (!Shotgun.loadFromFile("../../../res/Shotgun.png"))
+	if (!Shotgun.loadFromFile(RES_PATH + "Shotgun.png"))
 		exit(0);
-	if (!AssaultRifle.loadFromFile("../../../res/AssaultRifle.png"))
+	if (!AssaultRifle.loadFromFile(RES_PATH + "AssaultRifle.png"))
 		exit(0);
-	if (!BaseballBat.loadFromFile("../../../res/BaseballBat.png"))
+	if (!BaseballBat.loadFromFile(RES_PATH + "BaseballBat.png"))
 		exit(0);
 
 	mListTexture.insert({ "Shotgun",Shotgun });

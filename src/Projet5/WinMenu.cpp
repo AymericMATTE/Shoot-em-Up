@@ -1,9 +1,10 @@
 #include "WinMenu.h"
 #include "GameManager.h"
+#include "Macro.h"
 
 WinMenu::WinMenu() : Menu()
 {
-	if (!mTexture.loadFromFile("../../../res/VictoryScreen.png"))
+	if (!mTexture.loadFromFile(RES_PATH + "VictoryScreen.png"))
 		exit(0);
 }
 

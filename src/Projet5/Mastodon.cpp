@@ -1,24 +1,25 @@
 #include "Mastodon.h"
 #include "Bullet.h"
 #include "Player.h"
+#include "Macro.h"
 
-Mastodon::Mastodon(sf::Vector2f position) : Enemy("../../../res/BigBoss.png", 1000, 150.f)
+Mastodon::Mastodon(sf::Vector2f position) : Enemy(RES_PATH + "BigBoss.png", 1000, 150.f)
 {
 	mEnraged = false;
 	mCooldown = 5.f;
 	setPosition(position);
 
-	if (!mEnragedTexture.loadFromFile("../../../res/EnragedBigBoss.png"))
+	if (!mEnragedTexture.loadFromFile(RES_PATH + "EnragedBigBoss.png"))
 		exit(0);
 }
 
-Mastodon::Mastodon(float x, float y) : Enemy("../../../res/BigBoss.png", 1000, 150.f)
+Mastodon::Mastodon(float x, float y) : Enemy(RES_PATH + "BigBoss.png", 1000, 150.f)
 {
 	mEnraged = false;
 	mCooldown = 5.f;
 	setPosition(x, y);
 
-	if (!mEnragedTexture.loadFromFile("../../../res/EnragedBigBoss.png"))
+	if (!mEnragedTexture.loadFromFile(RES_PATH + "EnragedBigBoss.png"))
 		exit(0);
 }
 
